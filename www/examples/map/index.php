@@ -2,14 +2,15 @@
 namespace Rmk\Collection;
 
 use \UnexpectedValueException as UnexpectedValueException;
+use \stdClass as stdClass;
 
 include '../../bootstrap.php';
 
 $map = new HashMap('stdClass', 'string');
 
-$obj1 = new \stdClass();
-$obj2 = new \stdClass();
-$obj3 = new \stdClass();
+$obj1 = new stdClass();
+$obj2 = new stdClass();
+$obj3 = new stdClass();
 
 // Установка ассоциаций ключ / значение.
 $map->set('k1', $obj1);
