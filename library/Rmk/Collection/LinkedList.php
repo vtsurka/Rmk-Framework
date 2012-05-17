@@ -15,6 +15,8 @@
 
 namespace Rmk\Collection;
 
+use \InvalidArgumentException as InvalidArgumentException;
+
 class LinkedList extends ArrayList implements Deque
 {
 

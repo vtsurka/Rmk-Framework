@@ -14,6 +14,8 @@
 
 namespace Rmk\Collection;
 
+use \InvalidArgumentException as InvalidArgumentException;
+
 interface Queue extends Collection
 {
 

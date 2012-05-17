@@ -17,6 +17,9 @@
 
 namespace Rmk\Collection;
 
+use \InvalidArgumentException as InvalidArgumentException;
+use \OutOfRangeException as OutOfRangeException;
+
 interface SequentialList extends Collection
 {
 

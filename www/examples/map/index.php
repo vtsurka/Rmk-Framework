@@ -10,10 +10,12 @@ $obj1 = new \stdClass();
 $obj2 = new \stdClass();
 $obj3 = new \stdClass();
 
+// Установка ассоциаций ключ / значение.
 $map->set('k1', $obj1);
 $map->set('k2', $obj2);
 $map->set('k3', $obj3);
 
+// Обход карты.
 $map->each(function($value, $key, $thisMap) {
             /**
              * @TODO: Обработка карты.
@@ -21,9 +23,11 @@ $map->each(function($value, $key, $thisMap) {
         }
 );
 
+// Удаление по значению.
 $map->remove($obj1);
 $map->remove($obj2);
-var_dump($map);exit;
+
+// Удаление по ключу.
 $map->removeKey('k3');
 
 if ($map->isEmpty()) {
@@ -32,10 +36,17 @@ if ($map->isEmpty()) {
      */
 }
 
+// Преобразование в массив.
+$array = $map->toArray();
+
+$objectMap = new HashMap('stdClass', 'stdClass');
+
 try {
-    $array = $map->toArray();
-} catch (UnexpectedValueException $e) {
-    //
+    $objectArray = $objectMap->toArray();
+} catch (UnexpectedValueException $exc) {
+    echo 'Объекты не могут являться ключами массива.';
 }
+
+
 
 var_dump($map);

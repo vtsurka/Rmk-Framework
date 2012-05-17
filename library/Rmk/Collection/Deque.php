@@ -15,6 +15,8 @@
 
 namespace Rmk\Collection;
 
+use \InvalidArgumentException as InvalidArgumentException;
+
 interface Deque extends Queue
 {
 

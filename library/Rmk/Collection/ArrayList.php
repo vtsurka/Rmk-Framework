@@ -16,6 +16,10 @@
 
 namespace Rmk\Collection;
 
+use \UnexpectedValueException as UnexpectedValueException;
+use \InvalidArgumentException as InvalidArgumentException;
+use \OutOfRangeException as OutOfRangeException;
+
 class ArrayList extends AbstractCollection implements SequentialList
 {
 
@@ -144,9 +148,9 @@ class ArrayList extends AbstractCollection implements SequentialList
      * InvalidArgumentException. Если значение по индексу уже установлено, то
      * его индекс и индексы всех последующих значений будут увеличены на
      * единицу. Если индекс будет находится за пределами списка дальше чем на
-     * единицу, то будет выброшено исключение OutOfRangeException. Если значение
-     * по индексу будет добавлено, то будет возвращено true, в противном  случае
-     * будет возвращено false.
+     * единицу, то будет выброшено исключение OutOfRangeException. Если 
+     * значение по индексу будет добавлено, то будет возвращено true, в 
+     * противном случае будет возвращено false.
      *
      * @param  int $index
      * @param  mixed $value

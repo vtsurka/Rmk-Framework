@@ -13,6 +13,9 @@
 namespace Rmk\Collection;
 
 use Rmk\Util;
+use \UnexpectedValueException as UnexpectedValueException;
+use \InvalidArgumentException as InvalidArgumentException;
+use \RuntimeException as RuntimeException;
 
 abstract class AbstractMap extends AbstractCollection implements Map
 {

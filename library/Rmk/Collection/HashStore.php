@@ -17,6 +17,9 @@
 
 namespace Rmk\Collection;
 
+use \UnexpectedValueException as UnexpectedValueException;
+use \InvalidArgumentException as InvalidArgumentException;
+
 class HashStore extends AbstractMap
 {
 

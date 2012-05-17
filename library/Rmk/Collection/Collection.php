@@ -15,6 +15,9 @@
 
 namespace Rmk\Collection;
 
+use \UnexpectedValueException as UnexpectedValueException;
+use \InvalidArgumentException as InvalidArgumentException;
+use \RuntimeException as RuntimeException;
 use \Countable as Countable;
 
 interface Collection extends Countable, Iterable
