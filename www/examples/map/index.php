@@ -23,7 +23,7 @@ $map->each(function($value, $key, $thisMap) {
 
 $map->remove($obj1);
 $map->remove($obj2);
-
+var_dump($map);exit;
 $map->removeKey('k3');
 
 if ($map->isEmpty()) {

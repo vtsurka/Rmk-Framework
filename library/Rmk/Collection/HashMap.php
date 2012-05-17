@@ -149,6 +149,9 @@ class HashMap extends AbstractMap
         unset($this->_keys[$keyHash]);
         unset($this->_keysToValues[$keyHash]);
         unset($this->_valuesKeysToIndexes[$valueHash][$keyHash]);
+        if (empty($this->_valuesKeysToIndexes[$valueHash])) {
+            unset($this->_valuesKeysToIndexes[$valueHash]);
+        }
 
         return true;
     }
@@ -183,6 +186,9 @@ class HashMap extends AbstractMap
         unset($this->_values[$valueIndex]);
         unset($this->_valuesToKeys[$valueIndex]);
         unset($this->_valuesKeysToIndexes[$valueHash][$keyHash]);
+        if (empty($this->_valuesKeysToIndexes[$valueHash])) {
+            unset($this->_valuesKeysToIndexes[$valueHash]);
+        }
 
         return true;
     }
