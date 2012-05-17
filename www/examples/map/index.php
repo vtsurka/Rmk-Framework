@@ -49,7 +49,3 @@ try {
 } catch (UnexpectedValueException $exc) {
     echo 'Объекты не могут являться ключами массива.';
 }
-
-
-
-var_dump($map);
