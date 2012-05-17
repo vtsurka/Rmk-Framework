@@ -205,6 +205,10 @@ class HashMap extends AbstractMap
             );
         }
 
+        if ($this->isEmpty()) {
+            return array();
+        }
+
         return array_combine($this->_keys, $this->_values);
     }
 
