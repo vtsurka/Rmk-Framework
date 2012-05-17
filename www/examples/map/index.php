@@ -1,6 +1,7 @@
 <?php
-
 namespace Rmk\Collection;
+
+use \UnexpectedValueException as UnexpectedValueException;
 
 include '../../bootstrap.php';
 
@@ -39,6 +40,8 @@ if ($map->isEmpty()) {
 // Преобразование в массив.
 $array = $map->toArray();
 
+// Внимание! Невозможно преобразовать в массив карту, у которой ключами 
+// являются объекты.
 $objectMap = new HashMap('stdClass', 'stdClass');
 
 try {
