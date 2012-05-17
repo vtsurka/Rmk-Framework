@@ -9,6 +9,8 @@
 
 namespace Rmk\Util\Value\Type;
 
+use \UnexpectedValueException as UnexpectedValueException;
+
 class Helper
 {
 
@@ -24,7 +26,7 @@ class Helper
      * 
      * @var string
      */
-    private $_exceptionClass = 'InvalidArgumentException';
+    private $_exceptionClass = '\InvalidArgumentException';
 
     /**
      * Текст сообщения исключения.
