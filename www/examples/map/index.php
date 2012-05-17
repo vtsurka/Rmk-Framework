@@ -1,4 +1,5 @@
 <?php
+
 namespace Rmk\Collection;
 
 use \UnexpectedValueException as UnexpectedValueException;
