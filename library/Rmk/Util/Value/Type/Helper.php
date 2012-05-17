@@ -1,5 +1,7 @@
 <?php
 /**
+ * Помощник определения типов.
+ * 
  * @category Rmk
  * @package  Rmk_Util
  * @author   Roman rmk Mogilatov rmogilatov@gmail.com
@@ -43,7 +45,7 @@ class Helper
      *
      * @var array
      */
-    private $_simpleTypes = array(
+    private static $_simpleTypes = array(
         'int'      => 'is_int',
         'float'    => 'is_float',
         'string'   => 'is_string',
@@ -69,7 +71,7 @@ class Helper
 
     /**
      * Конструктор.
-     *
+     * 
      * @param  string $type
      * @return void
      */
@@ -188,7 +190,6 @@ class Helper
     /**
      * Проверяет, является ли значение простым.
      *
-     * @param  string $type
      * @return boolean
      */
     public function isSimpleType()
@@ -197,9 +198,9 @@ class Helper
             return $this->_isSimpleType;
         }
 
-        if (array_key_exists($this->_type, $this->_simpleTypes)) {
+        if (array_key_exists($this->_type, static::$_simpleTypes)) {
             $this->_isSimpleType = true;
-            $this->_simpleTypeFunction = $this->_simpleTypes[$this->_type];
+            $this->_simpleTypeFunction = static::$_simpleTypes[$this->_type];
         } else {
             $this->_isSimpleType = false;
         }
