@@ -2,6 +2,7 @@
 namespace Rmk\Collection;
 
 use \UnexpectedValueException as UnexpectedValueException;
+use \InvalidArgumentException as InvalidArgumentException;
 use \stdClass as stdClass;
 
 include '../../bootstrap.php';
@@ -16,6 +17,19 @@ $obj3 = new stdClass();
 $map->set('k1', $obj1);
 $map->set('k2', $obj2);
 $map->set('k3', $obj3);
+
+try {
+    $map->set(27, $obj1);
+} catch (InvalidArgumentException $exc) {
+    echo 'Ключ не подходит по типу.';
+}
+
+try {
+    $map->set('k4', new UnexpectedValueException);
+} catch (InvalidArgumentException $exc) {
+    echo 'Значение не подходит по типу.';
+}
+
 
 // Обход карты.
 $map->each(function($value, $key, $thisMap) {
